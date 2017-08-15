@@ -23,5 +23,9 @@ public class Test01 {
         logger.fatal("严重错误fatal信息。");
 
         // 以上这些方法都是有重载的方法了，可以直接把异常名加，打印出来。
+        logger.error("报错信息",new IllegalAccessException("非法参数"));
+
+        // 根据具体的业务逻辑，选择上面 的方法。
+
     }
 }
