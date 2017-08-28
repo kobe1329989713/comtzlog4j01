@@ -15,17 +15,23 @@ public class Test01 {
     private static Logger logger = Logger.getLogger(Test01.class);
 
     public static void main(String[] args) {
-        logger.info("Info:普通信息");
-        logger.debug("调试debug 信息。");
-        logger.error("报错信息。");
-        logger.warn("警告信息。");
+        int i = 0;
+        while (i < 10) {
 
-        logger.fatal("严重错误fatal信息。");
+            logger.info("Info:普通信息：====：INFO");
+            logger.debug("调试debug 信息。：====：DEBUG");
+            logger.error("报错信息。：====：ERROR");
+            logger.warn("警告信息。：====：WARN");
 
-        // 以上这些方法都是有重载的方法了，可以直接把异常名加，打印出来。
-        logger.error("报错信息",new IllegalAccessException("非法参数"));
+            logger.fatal("严重错误fatal信息。====：FATAL");
 
-        // 根据具体的业务逻辑，选择上面 的方法。
+            // 以上这些方法都是有重载的方法了，可以直接把异常名加，打印出来。
+            logger.error("报错信息",new IllegalAccessException("非法参数"));
+
+            // 根据具体的业务逻辑，选择上面 的方法。  就是把这些报错信息加到日志里面去，到时查看日志来定位错误在哪个位置。
+
+            i++;
+        }
 
     }
 }
